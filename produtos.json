@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "nome": "Cloro Vmax 10-12%",
+    "categoria": "destaques mais vendidos",
+    "descricaoBreve": "HIPOCLORITO DE SÓDIO é indicado para limpeza e desinfecção de pisos, paredes, azulejos, equipamentos, etc.",
+    "descricaoCompleta": "Para desinfectar: Diluir 01 parte do produto para 5 partes de água, deixando agir por 10 minutos antes de enxaguar.",
+    "preco": "25,00",
+    "precoAntigo": null,
+    "imagemCard": "https://i.imgur.com/L8a2s7g.jpeg",
+    "imagemDetalhe": "https://i.imgur.com/L8a2s7g.jpeg",
+    "specs": {
+      "material": "HIPOCLORITO DE SÓDIO",
+      "Litragem": "5L",
+      "Validade": "6 meses"
+    }
+  },
+  {
+    "id": 2,
+    "nome": "Kit Limpeza Completa",
+    "categoria": "promocoes",
+    "descricaoBreve": "O conjunto completo para atender todas as suas necessidades de limpeza.",
+    "descricaoCompleta": "Economize comprando o kit completo! Inclui todos os itens essenciais para uma limpeza profissional.",
+    "preco": "399,90",
+    "precoAntigo": "499,90",
+    "imagemCard": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5815193e-1cff-4541-af3a-56dacaab83ef.png",
+    "imagemDetalhe": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d9f1da0-a80e-4f42-a23d-e89d4a544fc5.png",
+    "specs": {
+      "material": "Diversos",
+      "garantia": "12 meses"
+    }
+  },
+  {
+    "id": 3,
+    "nome": "Modelo Profissional",
+    "categoria": "destaques",
+    "descricaoBreve": "Solução robusta para quem busca qualidade e desempenho superior.",
+    "descricaoCompleta": "A solução definitiva para profissionais que exigem o máximo em performance e robustez.",
+    "preco": "899,90",
+    "precoAntigo": null,
+    "imagemCard": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d9f1da0-a80e-4f42-a23d-e89d4a544fc5.png",
+    "imagemDetalhe": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f7091b48-fd3e-4510-9917-75e55b304eab.png",
+    "specs": {
+      "material": "Fibra de carbono e titânio",
+      "peso": "2.1kg",
+      "garantia": "36 meses"
+    }
+  }
+]
