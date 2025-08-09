@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main # Ramo principal do seu GitHub
+
+media_folder: "img" # Pasta onde as novas imagens serão salvas
+public_folder: "/img" # Como o site deve se referir às imagens
+
+collections:
+  - name: "produtos" # Identificador da coleção
+    label: "Produtos" # Nome que aparece no painel
+    folder: "_produtos" # Pasta temporária para edição (não se preocupe com isso)
+    create: true # Permite criar novos produtos
+    slug: "{{id}}" # Nome do arquivo será baseado no ID
+    fields: # Os campos do formulário de edição
+      - { label: "ID", name: "id", widget: "number" }
+      - { label: "Nome do Produto", name: "nome", widget: "string" }
+      - { label: "Categorias", name: "categoria", widget: "string", hint: "Escreva as categorias separadas por espaço. Ex: destaques novidades" }
+      - { label: "Descrição Curta (para o card)", name: "descricaoBreve", widget: "text" }
+      - { label: "Descrição Completa (para detalhes)", name: "descricaoCompleta", widget: "markdown" }
+      - { label: "Preço (Ex: 25,00)", name: "preco", widget: "string" }
+      - { label: "Preço Antigo (Opcional, deixar em branco se não tiver)", name: "precoAntigo", widget: "string", required: false }
+      - { label: "Imagem do Card", name: "imagemCard", widget: "image" }
+      - { label: "Imagem para Detalhes", name: "imagemDetalhe", widget: "image" }
+      - label: "Especificações"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Material", name: "material", widget: "string", required: false }
+          - { label: "Litragem", name: "Litragem", widget: "string", required: false }
+          - { label: "Validade", name: "Validade", widget: "string", required: false }
+          - { label: "Dimensões", name: "dimensoes", widget: "string", required: false }
+          - { label: "Peso", name: "peso", widget: "string", required: false }
+          - { label: "Garantia", name: "garantia", widget: "string", required: false }
