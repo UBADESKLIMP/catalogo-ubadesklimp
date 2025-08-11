@@ -191,17 +191,6 @@
             if (!listaDeProdutos || listaDeProdutos.length === 0) {
                 grade.innerHTML = '<p class="text-gray-500 col-span-full text-center">Nenhum produto encontrado.</p>';
                 return;
-            }
-            const cardsHTML = listaDeProdutos.map(produto => {
-                let precoHTML = `<span class="font-bold text-gray-900 text-lg">R$ ${produto.preco}</span>`;
-                if (produto.precoAntigo) {
-                    precoHTML = `
-                        <div>
-                            <span class="text-gray-400 text-sm line-through mr-2">R$ ${produto.precoAntigo}</span>
-                            <span class="font-bold text-red-600 text-lg">R$ ${produto.preco}</span>
-                        </div>
-                    `;
-                }
                 let tagHTML = '';
                 if (produto.categoria.includes('novidades')) {
                     tagHTML = '<span class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">Novidade</span>';
