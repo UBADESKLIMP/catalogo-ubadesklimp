@@ -1,24 +1,30 @@
 backend:
   name: git-gateway
-  branch: main # Ramo principal do seu GitHub
+  branch: main
 
-media_folder: "img" # Pasta onde as novas imagens serão salvas
-public_folder: "/img" # Como o site deve se referir às imagens
+media_folder: "img"
+public_folder: "/img"
 
 collections:
-  - name: "produtos" # Identificador da coleção
+  - name: "produtos" # Nome da coleção
     label: "Produtos" # Nome que aparece no painel
-    folder: "_produtos" # Pasta temporária para edição (não se preocupe com isso)
-    create: true # Permite criar novos produtos
-    slug: "{{id}}" # Nome do arquivo será baseado no ID
-    fields: # Os campos do formulário de edição
+    label_singular: "Produto" # Nome para um único item
+    description: "Aqui você pode adicionar, editar e remover produtos do catálogo."
+
+    # --- A GRANDE MUDANÇA ESTÁ AQUI ---
+    file: "produtos.json" # Diz ao CMS para editar este arquivo único
+
+    # O resto define que o conteúdo do arquivo é uma lista de itens
+    create: true 
+    widget: "list" 
+    fields: # Os campos de cada item na lista
       - { label: "ID", name: "id", widget: "number" }
       - { label: "Nome do Produto", name: "nome", widget: "string" }
       - { label: "Categorias", name: "categoria", widget: "string", hint: "Escreva as categorias separadas por espaço. Ex: destaques novidades" }
       - { label: "Descrição Curta (para o card)", name: "descricaoBreve", widget: "text" }
       - { label: "Descrição Completa (para detalhes)", name: "descricaoCompleta", widget: "markdown" }
       - { label: "Preço (Ex: 25,00)", name: "preco", widget: "string" }
-      - { label: "Preço Antigo (Opcional, deixar em branco se não tiver)", name: "precoAntigo", widget: "string", required: false }
+      - { label: "Preço Antigo (Opcional)", name: "precoAntigo", widget: "string", required: false }
       - { label: "Imagem do Card", name: "imagemCard", widget: "image" }
       - { label: "Imagem para Detalhes", name: "imagemDetalhe", widget: "image" }
       - label: "Especificações"
