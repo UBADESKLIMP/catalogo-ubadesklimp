@@ -258,13 +258,13 @@
           
           const specsList = document.getElementById('detalhes-specs');
           specsList.innerHTML = '';
-          specsList.className = 'space-y-2'; // Espaçamento vertical entre as linhas
+          specsList.className = 'space-y-2'; 
           
           for(const [key, value] of Object.entries(produto.specs)) {
               if(value){
                   const li = document.createElement('li');
-                  // VERSÃO FINAL: Colunas automáticas com espaçamento e alinhamento
-                  li.className = 'grid grid-cols-[auto_1fr] gap-x-3 text-left'; 
+                  // A MUDANÇA FINAL ESTÁ AQUI: Usando a nossa classe customizada
+                  li.className = 'spec-grid'; 
                   li.innerHTML = `<span class="font-medium text-gray-800 capitalize">${key.replace('_', ' ')}:</span><span class="text-gray-600">${value}</span>`;
                   specsList.appendChild(li);
               }
