@@ -34,20 +34,22 @@
       "descricaoCompleta": "\nUso: Papel toalha interfolha ideal para secagem e higienização das mãos. Proporciona alta absorção, resistência e maciez, sendo indicado para banheiros, cozinhas, consultórios, escritórios e estabelecimentos comerciais em geral."
     },
     {
-      "imagemCard": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d9f1da0-a80e-4f42-a23d-e89d4a544fc5.png",
-      "imagemDetalhe": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f7091b48-fd3e-4510-9917-75e55b304eab.png",
-      "preco": "899,90",
-      "categoria": "destaques promocoes",
+      "imagemCard": "/img/ita-soda-int-ex.webp",
+      "imagemDetalhe": "/img/ita-soda-int-ex.webp",
+      "preco": "25,00",
+      "categoria": "destaques mais vendidos",
       "specs": {
-        "material": "Fibra de carbono e titânio",
-        "peso": "2.1kg",
-        "garantia": "36 meses"
+        "material": "Hidróxido de Sódio (99%) – solução aquosa",
+        "peso": "1 Kg",
+        "garantia": "",
+        "Litragem": "1 L",
+        "Validade": "12 meses"
       },
-      "precoAntigo": "1.000",
-      "nome": "Modelo Profissional",
+      "precoAntigo": "",
+      "nome": "Ita Soda Líquida 1L",
       "id": 3,
-      "descricaoBreve": "Solução robusta para quem busca qualidade e desempenho superior.",
-      "descricaoCompleta": "A solução definitiva para profissionais que exigem o máximo em performance e robustez."
+      "descricaoBreve": "SODA LÍQUIDA indicada para limpeza pesada, desentupimento e fabricação de sabão.",
+      "descricaoCompleta": "\nProduto com **99% de Hidróxido de Sódio** em solução aquosa, de alta eficiência, indicado para limpeza profunda, desentupimento de canos e ralos, remoção de crostas e gorduras incrustadas. Também muito utilizado na **fabricação artesanal de sabão**. Recomendado para uso doméstico e industrial, sempre seguindo as orientações de segurança para manuseio."
     },
     {
       "imagemCard": "/img/veja-original-int.jpg",
