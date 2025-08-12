@@ -22,13 +22,15 @@
       "preco": "17,00",
       "categoria": "destaques mais vendidos",
       "specs": {
-        "Qualidade": "Intermediario"
+        "Qualidade": "Intermediario",
+        "material": "CELULOSE",
+        "dimensoes": "20 cm x 21 cm"
       },
       "precoAntigo": null,
       "nome": "Isapel Interfolha 1.000 Luxo",
       "id": 2,
-      "descricaoBreve": "Papel Toalha interfolha",
-      "descricaoCompleta": "Economize comprando o kit completo! Inclui todos os itens essenciais para uma limpeza profissional."
+      "descricaoBreve": "PAPEL TOALHA INTERFOLHA é ideal para secagem e higienização das mãos, oferecendo maciez, resistência e alta absorção. Indicado para banheiros, cozinhas, escritórios e ambientes comerciais.",
+      "descricaoCompleta": "\nUso: Papel toalha interfolha ideal para secagem e higienização das mãos. Proporciona alta absorção, resistência e maciez, sendo indicado para banheiros, cozinhas, consultórios, escritórios e estabelecimentos comerciais em geral."
     },
     {
       "imagemCard": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d9f1da0-a80e-4f42-a23d-e89d4a544fc5.png",
