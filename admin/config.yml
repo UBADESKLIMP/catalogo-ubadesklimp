@@ -36,6 +36,7 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "Material", name: "material", widget: "string", required: false }
+                  - { label: "Quantidade", name: "quantidade", widget: "string", required: false }
                   - { label: "Litragem", name: "Litragem", widget: "string", required: false }
                   - { label: "Validade", name: "Validade", widget: "string", required: false }
                   - { label: "Dimensões", name: "dimensoes", widget: "string", required: false }
