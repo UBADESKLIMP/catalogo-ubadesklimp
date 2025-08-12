@@ -258,15 +258,14 @@
           
           const specsList = document.getElementById('detalhes-specs');
           specsList.innerHTML = '';
-          // Limpa as classes antigas para garantir a nova aparência
           specsList.className = 'space-y-1'; 
           
           for(const [key, value] of Object.entries(produto.specs)) {
               if(value){
                   const li = document.createElement('li');
-                  // A MUDANÇA ESTÁ AQUI: Usamos grid para criar 2 colunas alinhadas
-                  li.className = 'grid grid-cols-2 gap-x-2'; 
-                  li.innerHTML = `<span class="font-medium text-gray-800 capitalize">${key.replace('_', ' ')}:</span> <span class="text-gray-600">${value}</span>`;
+                  li.className = 'grid detalhes-specs-grid gap-x-2'; 
+                  // A MUDANÇA ESTÁ AQUI: Adicionado "text-right" ao primeiro <span>
+                  li.innerHTML = `<span class="font-medium text-gray-800 capitalize text-right">${key.replace('_', ' ')}:</span> <span class="text-gray-600">${value}</span>`;
                   specsList.appendChild(li);
               }
           }
