@@ -6,34 +6,38 @@ media_folder: "img"
 public_folder: "/img"
 
 collections:
-  - name: "produtos" # Nome da coleção
+  - name: "produtos" # Nome interno da coleção
     label: "Produtos" # Nome que aparece no painel
-    label_singular: "Produto" # Nome para um único item
-    description: "Aqui você pode adicionar, editar e remover produtos do catálogo."
-
-    # --- A GRANDE MUDANÇA ESTÁ AQUI ---
-    file: "produtos.json" # Diz ao CMS para editar este arquivo único
-
-    # O resto define que o conteúdo do arquivo é uma lista de itens
-    create: true 
-    widget: "list" 
-    fields: # Os campos de cada item na lista
-      - { label: "ID", name: "id", widget: "number" }
-      - { label: "Nome do Produto", name: "nome", widget: "string" }
-      - { label: "Categorias", name: "categoria", widget: "string", hint: "Escreva as categorias separadas por espaço. Ex: destaques novidades" }
-      - { label: "Descrição Curta (para o card)", name: "descricaoBreve", widget: "text" }
-      - { label: "Descrição Completa (para detalhes)", name: "descricaoCompleta", widget: "markdown" }
-      - { label: "Preço (Ex: 25,00)", name: "preco", widget: "string" }
-      - { label: "Preço Antigo (Opcional)", name: "precoAntigo", widget: "string", required: false }
-      - { label: "Imagem do Card", name: "imagemCard", widget: "image" }
-      - { label: "Imagem para Detalhes", name: "imagemDetalhe", widget: "image" }
-      - label: "Especificações"
-        name: "specs"
-        widget: "object"
+    label_singular: "Produto"
+    description: "Gerencie todos os produtos do catálogo aqui."
+    
+    # A estrutura abaixo é a correta para editar um arquivo JSON que contém uma lista
+    files:
+      - name: "lista_de_produtos"
+        label: "Lista de Produtos"
+        file: "produtos.json"
         fields:
-          - { label: "Material", name: "material", widget: "string", required: false }
-          - { label: "Litragem", name: "Litragem", widget: "string", required: false }
-          - { label: "Validade", name: "Validade", widget: "string", required: false }
-          - { label: "Dimensões", name: "dimensoes", widget: "string", required: false }
-          - { label: "Peso", name: "peso", widget: "string", required: false }
-          - { label: "Garantia", name: "garantia", widget: "string", required: false }
+          - name: produtos
+            label: Produtos
+            label_singular: Novo Produto
+            widget: list
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Nome do Produto", name: "nome", widget: "string" }
+              - { label: "Categorias", name: "categoria", widget: "string", hint: "Escreva as categorias separadas por espaço. Ex: destaques novidades" }
+              - { label: "Descrição Curta (para o card)", name: "descricaoBreve", widget: "text" }
+              - { label: "Descrição Completa (para detalhes)", name: "descricaoCompleta", widget: "markdown" }
+              - { label: "Preço (Ex: 25,00)", name: "preco", widget: "string" }
+              - { label: "Preço Antigo (Opcional)", name: "precoAntigo", widget: "string", required: false }
+              - { label: "Imagem do Card", name: "imagemCard", widget: "image" }
+              - { label: "Imagem para Detalhes", name: "imagemDetalhe", widget: "image" }
+              - label: "Especificações"
+                name: "specs"
+                widget: "object"
+                fields:
+                  - { label: "Material", name: "material", widget: "string", required: false }
+                  - { label: "Litragem", name: "Litragem", widget: "string", required: false }
+                  - { label: "Validade", name: "Validade", widget: "string", required: false }
+                  - { label: "Dimensões", name: "dimensoes", widget: "string", required: false }
+                  - { label: "Peso", name: "peso", widget: "string", required: false }
+                  - { label: "Garantia", name: "garantia", widget: "string", required: false }
