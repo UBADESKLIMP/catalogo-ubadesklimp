@@ -263,9 +263,10 @@
           for(const [key, value] of Object.entries(produto.specs)) {
               if(value){
                   const li = document.createElement('li');
-                  li.className = 'grid detalhes-specs-grid gap-x-2'; 
-                  // A MUDANÇA ESTÁ AQUI: Adicionado "text-right" ao primeiro <span>
-                  li.innerHTML = `<span class="font-medium text-gray-800 capitalize text-right">${key.replace('_', ' ')}:</span> <span class="text-gray-600">${value}</span>`;
+                  // A MUDANÇA ESTÁ AQUI: Nova estrutura de colunas automáticas
+                  li.className = 'grid grid-cols-[max-content_1fr] gap-x-4'; 
+                  // E AQUI: Removemos o "text-right"
+                  li.innerHTML = `<span class="font-medium text-gray-800 capitalize">${key.replace('_', ' ')}:</span> <span class="text-gray-600">${value}</span>`;
                   specsList.appendChild(li);
               }
           }
