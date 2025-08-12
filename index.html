@@ -239,33 +239,38 @@
         function fecharDetalhes() { document.getElementById('detalhes-modal').classList.add('hidden'); }
 
         function abrirDetalhes(idProduto) {
-            const produto = todosOsProdutos.find(p => p.id === idProduto);
-            if (!produto) return;
-            document.getElementById('detalhes-titulo').textContent = produto.nome;
-            document.getElementById('detalhes-nome').textContent = produto.nome;
-            document.getElementById('detalhes-descricao').textContent = produto.descricaoCompleta;
-            document.getElementById('detalhes-imagem').src = produto.imagemDetalhe;
-            document.getElementById('detalhes-imagem').alt = `Imagem detalhada de ${produto.nome}`;
-            document.getElementById('detalhes-preco').textContent = `R$ ${produto.preco}`;
-            const precoAntigoEl = document.getElementById('detalhes-preco-antigo');
-            if (produto.precoAntigo) {
-                precoAntigoEl.textContent = `R$ ${produto.precoAntigo}`;
-                precoAntigoEl.classList.remove('hidden');
-            } else {
-                precoAntigoEl.classList.add('hidden');
-            }
-            const specsList = document.getElementById('detalhes-specs');
-            specsList.innerHTML = '';
-            for(const [key, value] of Object.entries(produto.specs)) {
-                if(value){
-                    const li = document.createElement('li');
-                    li.className = 'flex';
-                    li.innerHTML = `<span class="font-medium min-w-[100px] capitalize">${key.replace('_', ' ')}:</span> <span>${value}</span>`;
-                    specsList.appendChild(li);
-                }
-            }
-            document.getElementById('detalhes-modal').classList.remove('hidden');
-        }
+          const produto = todosOsProdutos.find(p => p.id === idProduto);
+          if (!produto) return;
+          document.getElementById('detalhes-titulo').textContent = produto.nome;
+          document.getElementById('detalhes-nome').textContent = produto.nome;
+          document.getElementById('detalhes-descricao').textContent = produto.descricaoCompleta;
+          document.getElementById('detalhes-imagem').src = produto.imagemDetalhe;
+          document.getElementById('detalhes-imagem').alt = `Imagem detalhada de ${produto.nome}`;
+          document.getElementById('detalhes-preco').textContent = `R$ ${produto.preco}`;
+          const precoAntigoEl = document.getElementById('detalhes-preco-antigo');
+          if (produto.precoAntigo) {
+              precoAntigoEl.textContent = `R$ ${produto.precoAntigo}`;
+              precoAntigoEl.classList.remove('hidden');
+          } else {
+              precoAntigoEl.classList.add('hidden');
+          }
+          
+          const specsList = document.getElementById('detalhes-specs');
+          specsList.innerHTML = '';
+          // Limpa as classes antigas para garantir a nova aparência
+          specsList.className = 'space-y-1'; 
+          
+          for(const [key, value] of Object.entries(produto.specs)) {
+              if(value){
+                  const li = document.createElement('li');
+                  // A MUDANÇA ESTÁ AQUI: Usamos grid para criar 2 colunas alinhadas
+                  li.className = 'grid grid-cols-2 gap-x-2'; 
+                  li.innerHTML = `<span class="font-medium text-gray-800 capitalize">${key.replace('_', ' ')}:</span> <span class="text-gray-600">${value}</span>`;
+                  specsList.appendChild(li);
+              }
+          }
+          document.getElementById('detalhes-modal').classList.remove('hidden');
+      }
 
         function filtrarProdutos(categoria) {
             document.querySelectorAll('.categoria-btn').forEach(btn => btn.classList.remove('active'));
