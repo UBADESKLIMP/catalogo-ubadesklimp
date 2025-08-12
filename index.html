@@ -178,7 +178,8 @@
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                todosOsProdutos = await response.json();
+                const data = await response.json();
+                todosOsProdutos = data.produtos;
                 renderizarProdutos(todosOsProdutos);
             } catch (error) {
                 console.error("Não foi possível carregar os produtos:", error);
