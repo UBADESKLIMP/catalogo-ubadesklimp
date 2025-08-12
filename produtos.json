@@ -55,13 +55,14 @@
       "preco": "5,50",
       "categoria": "destaques mais vendidos",
       "specs": {
-        "Litragem": "500ml",
-        "Validade": "1 ano"
+        "Litragem": "500 ml",
+        "Validade": "1 ano",
+        "material": "Limpador multiuso com ação desengordurante"
       },
       "nome": "Veja Multiuso",
       "id": 4,
-      "descricaoBreve": "multiuso serve para tudo",
-      "descricaoCompleta": "fogao"
+      "descricaoBreve": "LIMPADOR MULTIUSO é indicado para limpeza de diversas superfícies, removendo sujeira e gordura com eficiência, deixando brilho e perfume agradável.",
+      "descricaoCompleta": "\nUso: Produto de limpeza multiuso com ação desengordurante, ideal para remoção de sujeiras e gorduras em superfícies como fogões, pias, azulejos, bancadas e eletrodomésticos. Proporciona limpeza prática e rápida, deixando brilho e perfume agradável."
     }
   ]
 }
