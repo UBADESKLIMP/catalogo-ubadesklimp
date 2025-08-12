@@ -65,6 +65,22 @@
       "id": 4,
       "descricaoBreve": "LIMPADOR MULTIUSO é indicado para limpeza de diversas superfícies, removendo sujeira e gordura com eficiência, deixando brilho e perfume agradável.",
       "descricaoCompleta": "\nUso: Produto de limpeza multiuso com ação desengordurante, ideal para remoção de sujeiras e gorduras em superfícies como fogões, pias, azulejos, bancadas e eletrodomésticos. Proporciona limpeza prática e rápida, deixando brilho e perfume agradável."
+    },
+    {
+      "imagemCard": "/img/start-grill-int-ex.webp",
+      "imagemDetalhe": "/img/start-grill-int-ex.webp",
+      "preco": "32,00",
+      "categoria": "destaques mais vendidos",
+      "specs": {
+        "material": "Detergente alcalino concentrado",
+        "Litragem": "1 L",
+        "Validade": "24 Meses",
+        "peso": ""
+      },
+      "nome": "Startgrill Desincrustante 1L",
+      "id": 5,
+      "descricaoBreve": "DETERGENTE DESINCRUSTANTE indicado para a remoção pesada de gorduras e incrustações carbonizadas de coifas, grelhas e churrasqueiras.",
+      "descricaoCompleta": "\nDetergente desincrustante de alta potência, desenvolvido para a limpeza profunda e remoção de gorduras e resíduos carbonizados. Sua fórmula concentrada é ideal para dissolver sujeiras de difícil remoção em coifas, grelhas, churrasqueiras, formas, fornos e outras superfícies de metal laváveis. Perfeito para uso em cozinhas industriais, restaurantes e áreas de churrasco que necessitam de uma limpeza eficaz."
     }
   ]
 }
