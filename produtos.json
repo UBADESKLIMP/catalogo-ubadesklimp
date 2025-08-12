@@ -24,7 +24,8 @@
       "specs": {
         "Qualidade": "Intermediario",
         "material": "CELULOSE",
-        "dimensoes": "20 cm x 21 cm"
+        "dimensoes": "20 cm x 21 cm",
+        "quantidade": "1.000"
       },
       "precoAntigo": null,
       "nome": "Isapel Interfolha 1.000 Luxo",
