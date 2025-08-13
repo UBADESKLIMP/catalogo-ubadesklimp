@@ -33,6 +33,11 @@
             grid-template-columns: max-content 1fr;
             gap: 0.75rem;
         }
+        :focus-visible {
+          outline: 3px solid var(--cor-secundaria);
+          outline-offset: 2px;
+          border-radius: 4px; /* Opcional: para bordas arredondadas */
+      }
     </style>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
@@ -309,6 +314,18 @@
         }
 
         document.addEventListener('DOMContentLoaded', carregarProdutos);
+
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+              // Pega todos os modais e os fecha
+              const modais = document.querySelectorAll('.modal');
+              modais.forEach(modal => {
+                  if (!modal.classList.contains('hidden')) {
+                      modal.classList.add('hidden');
+                  }
+              });
+          }
+      });
     </script>
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
