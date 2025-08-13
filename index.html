@@ -57,7 +57,7 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8 flex-grow">
+    <main class="container mx-auto px-4 py-8 flex-grow relative">
         <div id="busca-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
             <div class="bg-white p-8 rounded-lg w-full max-w-md">
                 <div class="flex justify-between items-center mb-4">
@@ -104,15 +104,17 @@
                 <div>
                     <img src="" alt="Imagem detalhada do produto" class="w-full rounded-lg" id="detalhes-imagem">
                 </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2" id="detalhes-nome"></h3>
-                    <p class="text-gray-700 mb-6" id="detalhes-descricao"></p>
-                    <div class="mb-6">
-                        <h4 class="font-semibold mb-2">Especificações:</h4>
-                        <ul id="detalhes-specs" class="text-gray-600">
-                        </ul>
+                <div class="flex flex-col">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2" id="detalhes-nome"></h3>
+                        <p class="text-gray-700 mb-6" id="detalhes-descricao"></p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-2">Especificações:</h4>
+                            <ul id="detalhes-specs" class="text-gray-600">
+                            </ul>
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between mt-auto pt-4">
                         <div>
                             <span class="text-gray-400 line-through mr-2 text-lg hidden" id="detalhes-preco-antigo"></span>
                             <span class="text-3xl font-bold text-gray-900" id="detalhes-preco"></span>
