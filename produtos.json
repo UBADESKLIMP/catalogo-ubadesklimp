@@ -81,6 +81,21 @@
       "id": 5,
       "descricaoBreve": "DETERGENTE DESINCRUSTANTE indicado para a remoção pesada de gorduras e incrustações carbonizadas de coifas, grelhas e churrasqueiras.",
       "descricaoCompleta": "\nDetergente desincrustante de alta potência, desenvolvido para a limpeza profunda e remoção de gorduras e resíduos carbonizados. Sua fórmula concentrada é ideal para dissolver sujeiras de difícil remoção em coifas, grelhas, churrasqueiras, formas, fornos e outras superfícies de metal laváveis. Perfeito para uso em cozinhas industriais, restaurantes e áreas de churrasco que necessitam de uma limpeza eficaz."
+    },
+    {
+      "imagemCard": "/img/start-grill-int-ex.webp",
+      "imagemDetalhe": "/img/start-grill-int-ex.webp",
+      "preco": "125,00",
+      "categoria": "sem categoria",
+      "specs": {
+        "material": "Detergente alcalino",
+        "Litragem": "5 L",
+        "Validade": "12 meses"
+      },
+      "nome": "Startgrill Desincrustante Profissional 5L",
+      "id": 6,
+      "descricaoBreve": "DESINCRUSTANTE PROFISSIONAL de alta potência, indicado para remoção de gorduras carbonizadas em cozinhas industriais e equipamentos.",
+      "descricaoCompleta": "\nDetergente desincrustante com fórmula concentrada, desenvolvido para uso exclusivamente profissional. É a solução ideal para a limpeza pesada e remoção de gorduras, óleos e incrustações carbonizadas de chapas, grelhas, fornos, coifas e outros equipamentos de cozinhas industriais. Atenção: Produto de uso profissional, com venda direta ao público proibida. Seu manuseio exige o uso de EPIs (Equipamentos de Proteção Individual), pois provoca queimaduras severas à pele e danos aos olhos."
     }
   ]
 }
