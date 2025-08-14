@@ -33,18 +33,18 @@
             grid-template-columns: max-content 1fr;
             gap: 0.75rem;
         }
+         /* Estilo de foco customizado para acessibilidade via teclado */
         :focus-visible {
-          outline: 3px solid var(--cor-secundaria);
-          outline-offset: 2px;
-          border-radius: 4px; /* Opcional: para bordas arredondadas */
-      }
+            outline: 3px solid var(--cor-secundaria);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 flex flex-col min-h-screen">
-     <header class="bg-blue-800 shadow-lg sticky top-0 z-40 text-white">
+    <header class="bg-blue-800 shadow-lg sticky top-0 z-40 text-white">
         <div class="container mx-auto px-4 py-4">
             <div class="flex flex-wrap justify-center sm:justify-between items-center gap-4">
-                
                 <a href="/" class="flex items-center transition hover:opacity-80">
                     <img src="logo_ubadesk.png" alt="UBADESKLIMP - Voltar para a página inicial" class="mr-4 h-16">
                     <div>
@@ -52,7 +52,6 @@
                         <p class="text-md text-blue-200 -mt-1">Te Atendendo Desde 1999</p>
                     </div>
                 </a>
-
                 <div class="flex items-center space-x-2">
                     <button onclick="abrirBusca()" class="p-3 rounded-full hover:bg-blue-700 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,14 +62,13 @@
                         Contato
                     </button>
                 </div>
-
             </div>
         </div>
     </header>
 
     <main class="container mx-auto px-4 py-8 flex-grow relative">
-        <div id="busca-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-            <div class="bg-white p-8 rounded-lg w-full max-w-md">
+        <div id="busca-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
+            <div class="bg-white p-8 rounded-lg w-11/12 max-w-md">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-xl font-bold">Buscar Produto</h2>
                     <button onclick="fecharBusca()" class="text-gray-500 hover:text-gray-700 text-2xl font-bold">&times;</button>
@@ -80,9 +78,9 @@
             </div>
         </div>
 
-        <section class="mb-12 text-center bg-blue-50 py-8 rounded-lg">
+        <section class="mb-12 text-center bg-blue-50 py-10 rounded-lg">
             <h2 class="text-3xl font-bold text-blue-800 mb-4">Produtos Profissionais de Limpeza</h2>
-            <p class="text-lg text-gray-700 max-w-3xl mx-auto">Soluções completas para limpeza residencial e comercial em Ubatuba</p>
+            <p class="text-xl font-semibold text-blue-700 max-w-3xl mx-auto">Te Atendendo Desde 1999</p>
         </section>
 
         <div class="flex flex-col md:flex-row gap-8">
@@ -106,24 +104,26 @@
     </main>
 
     <div id="detalhes-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
-        <div class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] flex flex-col">
+        <div class="bg-white rounded-lg w-11/12 md:w-full max-w-4xl max-h-[90vh] flex flex-col">
             <div class="p-6 border-b flex-shrink-0">
                 <div class="flex justify-between items-center">
                     <h2 class="text-2xl font-bold" id="detalhes-titulo">Detalhes do Produto</h2>
                     <button onclick="fecharDetalhes()" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">&times;</button>
                 </div>
             </div>
-            <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 overflow-y-auto">
-                <div>
-                    <img src="" alt="Imagem detalhada do produto" class="w-auto h-auto max-w-full max-h-[70vh] mx-auto object-contain rounded-lg" id="detalhes-imagem">
-                </div>
-                <div>
-                    <h3 class="text-xl font-semibold mb-2" id="detalhes-nome"></h3>
-                    <p class="text-gray-700 mb-6" id="detalhes-descricao"></p>
-                    <div class="mb-6">
-                        <h4 class="font-semibold mb-2">Especificações:</h4>
-                        <ul id="detalhes-specs" class="text-gray-600">
-                        </ul>
+            <div class="p-6 overflow-y-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="" alt="Imagem detalhada do produto" class="w-auto h-auto max-w-full max-h-[70vh] mx-auto object-contain rounded-lg" id="detalhes-imagem">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2" id="detalhes-nome"></h3>
+                        <p class="text-gray-700 mb-6" id="detalhes-descricao"></p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-2">Especificações:</h4>
+                            <ul id="detalhes-specs" class="text-gray-600">
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,8 +139,8 @@
         </div>
     </div>
 
-    <div id="contato-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-        <div class="bg-white p-8 rounded-lg w-full max-w-md">
+    <div id="contato-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
+        <div class="bg-white p-8 rounded-lg w-11/12 max-w-md">
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold text-blue-800">Contato UBADESKLIMP</h2>
                 <button onclick="fecharContato()" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">&times;</button>
@@ -254,13 +254,29 @@
             grade.innerHTML = cardsHTML;
         }
 
-        function abrirBusca() { document.getElementById('busca-modal').classList.remove('hidden'); }
-        function fecharBusca() { document.getElementById('busca-modal').classList.add('hidden'); }
-        function abrirContato() { document.getElementById('contato-modal').classList.remove('hidden'); }
-        function fecharContato() { document.getElementById('contato-modal').classList.add('hidden'); }
-        function fecharDetalhes() { document.getElementById('detalhes-modal').classList.add('hidden'); }
+        function abrirBusca() {
+            document.getElementById('busca-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+        function fecharBusca() {
+            document.getElementById('busca-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+        function abrirContato() {
+            document.getElementById('contato-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+        function fecharContato() {
+            document.getElementById('contato-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+        function fecharDetalhes() {
+            document.getElementById('detalhes-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
 
         function abrirDetalhes(idProduto) {
+            document.body.classList.add('overflow-hidden');
             const produto = todosOsProdutos.find(p => p.id === idProduto);
             if (!produto) return;
             document.getElementById('detalhes-titulo').textContent = produto.nome;
@@ -316,16 +332,16 @@
         document.addEventListener('DOMContentLoaded', carregarProdutos);
 
         document.addEventListener('keydown', function(event) {
-          if (event.key === 'Escape') {
-              // Pega todos os modais e os fecha
-              const modais = document.querySelectorAll('.modal');
-              modais.forEach(modal => {
-                  if (!modal.classList.contains('hidden')) {
-                      modal.classList.add('hidden');
-                  }
-              });
-          }
-      });
+            if (event.key === 'Escape') {
+                const modais = document.querySelectorAll('.modal');
+                modais.forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        modal.classList.add('hidden');
+                        document.body.classList.remove('overflow-hidden');
+                    }
+                });
+            }
+        });
     </script>
 
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
