@@ -103,19 +103,40 @@
         </div>
     </main>
 
+    Entendido! Pelas fotos, vejo que o rodapé com o preço e o botão "Comprar Agora" está aparecendo corretamente em produtos como o "Isapel Interfolha", mas no "Startgrill Desincrustante", ele não aparece.
+
+Este problema ocorre quando o conteúdo do pop-up (a imagem + texto) é muito alto, e a nossa estrutura de layout atual não consegue lidar com isso da melhor forma.
+
+Vamos aplicar a correção final, que resolve isso de uma vez por todas, garantindo que o rodapé apareça em todos os produtos, não importa o quão alta seja a imagem ou quão longo seja o texto.
+
+A Correção Final do Pop-up
+A maneira mais segura é substituir todo o bloco de código da janela de detalhes no seu arquivo index.html. Este novo código tem uma estrutura mais robusta.
+
+No seu VS Code, abra o arquivo index.html.
+
+Use o atalho Ctrl + F para encontrar o início da janela de detalhes, procurando por: id="detalhes-modal".
+
+Substitua todo o bloco de código, desde <div id="detalhes-modal" ...> até o seu </div> correspondente, por este novo código abaixo.
+
+HTML
+
     <div id="detalhes-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
         <div class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] flex flex-col">
+            
             <div class="p-6 border-b flex-shrink-0">
                 <div class="flex justify-between items-center">
                     <h2 class="text-2xl font-bold" id="detalhes-titulo">Detalhes do Produto</h2>
                     <button onclick="fecharDetalhes()" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">&times;</button>
                 </div>
             </div>
+
             <div class="p-6 overflow-y-auto min-h-0">
                 <div class="flex flex-col md:flex-row gap-8">
+                    
                     <div class="md:w-1/2">
                         <img src="" alt="Imagem detalhada do produto" class="w-full h-auto object-contain rounded-lg" id="detalhes-imagem">
                     </div>
+
                     <div class="md:w-1/2">
                         <h3 class="text-xl font-semibold mb-2" id="detalhes-nome"></h3>
                         <p class="text-gray-700 mb-6" id="detalhes-descricao"></p>
@@ -125,8 +146,10 @@
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
+
             <div class="p-6 border-t flex-shrink-0">
                 <div class="flex items-center justify-between">
                     <div>
