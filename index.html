@@ -46,7 +46,9 @@
         <div class="container mx-auto px-4 py-3">
             <div class="flex flex-wrap justify-center sm:justify-between items-center gap-4">
                 <a href="/" class="flex items-center transition hover:opacity-90">
-                    <img src="logo_ubadesk.png" alt="UBADESKLIMP - Voltar para a página inicial" class="h-16 mr-4">
+                    <div class="bg-white p-1 rounded-md shadow-sm mr-4 flex-shrink-0">
+                        <img src="logo_ubadesk.png" alt="UBADESKLIMP - Voltar para a página inicial" class="h-16">
+                    </div>
                     <div>
                         <h1 class="text-3xl font-bold text-white">UBADESKLIMP</h1>
                         <p class="text-md text-blue-200 -mt-1">Te Atendendo Desde 1999</p>
@@ -80,7 +82,7 @@
 
         <section class="mb-12 text-center bg-blue-50 py-10 rounded-lg">
             <h2 class="text-3xl font-bold text-blue-800 mb-4">Produtos Profissionais de Limpeza</h2>
-            <p class="text-xl font-semibold text-blue-700 max-w-3xl mx-auto">Soluções Completas para Limpeza Residencial e Comercial em Ubatuba</p>
+            <p class="text-xl font-semibold text-blue-700 max-w-3xl mx-auto">Te Atendendo Desde 1999</p>
         </section>
 
         <div class="flex flex-col md:flex-row gap-8">
@@ -104,36 +106,34 @@
     </main>
 
     <div id="detalhes-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
-        <div class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] flex flex-col">
-            <div class="p-6 border-b flex-shrink-0">
-                <div class="flex justify-between items-center">
+        <div class="bg-white rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto flex flex-col">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold" id="detalhes-titulo">Detalhes do Produto</h2>
                     <button onclick="fecharDetalhes()" class="text-gray-500 hover:text-gray-700 text-3xl font-bold">&times;</button>
                 </div>
-            </div>
-            <div class="p-6 overflow-y-auto min-h-0">
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="md:w-1/2">
-                        <img src="" alt="Imagem detalhada do produto" class="w-full h-auto object-contain rounded-lg" id="detalhes-imagem">
+                        <img src="" alt="Imagem detalhada do produto" class="w-auto h-auto max-w-full max-h-[75vh] md:max-h-[60vh] mx-auto object-contain rounded-lg" id="detalhes-imagem">
                     </div>
-                    <div class="md:w-1/2">
-                        <h3 class="text-xl font-semibold mb-2" id="detalhes-nome"></h3>
-                        <p class="text-gray-700 mb-6" id="detalhes-descricao"></p>
-                        <div class="mb-6">
-                            <h4 class="font-semibold mb-2">Especificações:</h4>
-                            <ul id="detalhes-specs" class="text-gray-600">
-                            </ul>
+                    <div class="md:w-1/2 flex flex-col">
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold mb-2" id="detalhes-nome"></h3>
+                            <p class="text-gray-700 mb-6" id="detalhes-descricao"></p>
+                            <div class="mb-6">
+                                <h4 class="font-semibold mb-2">Especificações:</h4>
+                                <ul id="detalhes-specs" class="text-gray-600">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-4">
+                            <div>
+                                <span class="text-gray-400 line-through mr-2 text-lg hidden" id="detalhes-preco-antigo"></span>
+                                <span class="text-3xl font-bold text-gray-900" id="detalhes-preco"></span>
+                            </div>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold">Comprar Agora</button>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="p-6 border-t flex-shrink-0">
-                <div class="flex items-center justify-between">
-                    <div>
-                        <span class="text-gray-400 line-through mr-2 text-lg hidden" id="detalhes-preco-antigo"></span>
-                        <span class="text-3xl font-bold text-gray-900" id="detalhes-preco"></span>
-                    </div>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold">Comprar Agora</button>
                 </div>
             </div>
         </div>
