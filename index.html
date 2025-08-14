@@ -209,50 +209,50 @@
         }
 
         function renderizarProdutos(listaDeProdutos) {
-            const grade = document.getElementById('grade-produtos');
-            if (!listaDeProdutos || listaDeProdutos.length === 0) {
-                grade.innerHTML = '<p class="text-gray-500 col-span-full text-center">Nenhum produto encontrado.</p>';
-                return;
-            }
-            const cardsHTML = listaDeProdutos.map(produto => {
-                let precoHTML = `<span class="font-bold text-gray-900 text-lg">R$ ${produto.preco}</span>`;
-                if (produto.precoAntigo) {
-                    precoHTML = `
-                        <div>
-                            <span class="text-gray-400 text-sm line-through mr-2">R$ ${produto.precoAntigo}</span>
-                            <span class="font-bold text-red-600 text-lg">R$ ${produto.preco}</span>
-                        </div>
-                    `;
-                }
-                let tagHTML = '';
-                if (produto.categoria.includes('novidades')) {
-                    tagHTML = '<span class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">Novidade</span>';
-                } else if (produto.categoria.includes('promocoes')) {
-                    tagHTML = '<span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Promoção</span>';
-                } else if (produto.categoria.includes('destaques')) {
-                    tagHTML = '<span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Mais Vendido</span>';
-                }
-                return `
-                    <div class="produto-card bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
-                        <div class="relative h-48 flex items-center justify-center p-4 bg-white">
-                            <img src="${produto.imagemCard}" alt="Imagem de ${produto.nome}" class="max-h-full max-w-full object-contain">
-                            ${tagHTML}
-                        </div>
-                        <div class="p-4 flex flex-col justify-between flex-grow">
-                            <div>
-                                <h3 class="font-bold text-lg mb-2">${produto.nome}</h3>
-                                <p class="text-gray-600 text-sm mb-4">${produto.descricaoBreve}</p>
-                            </div>
-                            <div class="flex justify-between items-center mt-4">
-                                ${precoHTML}
-                                <button onclick="abrirDetalhes(${produto.id})" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">Detalhes</button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-            grade.innerHTML = cardsHTML;
-        }
+          const grade = document.getElementById('grade-produtos');
+          if (!listaDeProdutos || listaDeProdutos.length === 0) {
+              grade.innerHTML = '<p class="text-gray-500 col-span-full text-center">Nenhum produto encontrado.</p>';
+              return;
+          }
+          const cardsHTML = listaDeProdutos.map(produto => {
+              let precoHTML = `<span class="font-bold text-gray-900 text-lg">R$ ${produto.preco}</span>`;
+              if (produto.precoAntigo) {
+                  precoHTML = `
+                      <div>
+                          <span class="text-gray-400 text-sm line-through mr-2">R$ ${produto.precoAntigo}</span>
+                          <span class="font-bold text-red-600 text-lg">R$ ${produto.preco}</span>
+                      </div>
+                  `;
+              }
+              let tagHTML = '';
+              if (produto.categoria.includes('novidades')) {
+                  tagHTML = '<span class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">Novidade</span>';
+              } else if (produto.categoria.includes('promocoes')) {
+                  tagHTML = '<span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Promoção</span>';
+              } else if (produto.categoria.includes('destaques')) {
+                  tagHTML = '<span class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Mais Vendido</span>';
+              }
+              return `
+                  <div class="produto-card bg-white rounded-lg overflow-hidden shadow-md flex flex-col">
+                      <div class="relative h-48 flex items-center justify-center p-4 bg-white">
+                          <img src="${produto.imagemCard}" alt="Imagem de ${produto.nome}" class="max-h-full max-w-full object-contain">
+                          ${tagHTML}
+                      </div>
+                      <div class="p-4 flex flex-col justify-between flex-grow">
+                          <div>
+                              <h3 class="font-bold text-base sm:text-lg mb-2">${produto.nome}</h3>
+                              <p class="text-gray-600 text-xs sm:text-sm mb-4">${produto.descricaoBreve}</p>
+                          </div>
+                          <div class="flex justify-between items-center mt-4">
+                              ${precoHTML}
+                              <button onclick="abrirDetalhes(${produto.id})" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">Detalhes</button>
+                          </div>
+                      </div>
+                  </div>
+              `;
+          }).join('');
+          grade.innerHTML = cardsHTML;
+      }
 
         function abrirBusca() {
             document.getElementById('busca-modal').classList.remove('hidden');
