@@ -46,9 +46,7 @@
         <div class="container mx-auto px-4 py-3">
             <div class="flex flex-wrap justify-center sm:justify-between items-center gap-4">
                 <a href="/" class="flex items-center transition hover:opacity-90">
-                    <div class="bg-white p-1 rounded-md shadow-sm mr-4 flex-shrink-0">
-                        <img src="logo_ubadesk.png" alt="UBADESKLIMP - Voltar para a página inicial" class="h-16">
-                    </div>
+                    <img src="logo_ubadesk.png" alt="UBADESKLIMP - Voltar para a página inicial" class="h-16 mr-4">
                     <div>
                         <h1 class="text-3xl font-bold text-white">UBADESKLIMP</h1>
                         <p class="text-md text-blue-200 -mt-1">Te Atendendo Desde 1999</p>
@@ -314,16 +312,16 @@
             if (categoria === 'todos') {
                 produtosParaMostrar = todosOsProdutos;
             } else {
-                produtosParaMostrar = todosOsProdutos.filter(produto => 
+                produtosParaMostrar = todosOsProdutos.filter(produto =>
                     produto.categoria.includes(categoria)
                 );
             }
             renderizarProdutos(produtosParaMostrar);
         }
-        
+
         function realizarBusca() {
             const termoBusca = document.getElementById('campo-busca').value.toLowerCase();
-            const produtosFiltrados = todosOsProdutos.filter(produto => 
+            const produtosFiltrados = todosOsProdutos.filter(produto =>
                 produto.nome.toLowerCase().includes(termoBusca)
             );
             renderizarProdutos(produtosFiltrados);
