@@ -57,14 +57,19 @@
                 order: -1;
                 width: 100% !important;
             }
-        }#detalhes-modal img {
+}/* Ajuste do espaçamento no modal de detalhes */
+#detalhes-modal img {
     display: block;
-    margin: 0 auto 15px auto; /* centraliza e adiciona 15px abaixo */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Espaço entre imagem e texto */
 }
 
 #detalhes-modal .conteudo-detalhes {
-    padding: 10px 15px; /* espaçamento interno no texto */
+    padding: 0 15px; /* Espaço lateral no texto */
+    box-sizing: border-box;
 }
+
 
     </style>
 </head>
@@ -118,7 +123,14 @@
             </div>
         </div>
     </main>
-
+<div id="detalhes-modal" class="hidden">
+    <img id="imagem-produto" src="" alt="">
+    <div class="conteudo-detalhes">
+        <h2 id="nome-produto"></h2>
+        <p id="descricao-produto"></p>
+        <span id="preco-produto"></span>
+    </div>
+</div>
     <div id="detalhes-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50 p-4">
         <div class="bg-white rounded-lg w-full max-w-3xl max-h-[900vh] flex flex-col">
             
